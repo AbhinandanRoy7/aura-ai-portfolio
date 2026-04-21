@@ -5,7 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 @layer base {
-  :root {
+  :root,
+  .dark {
     --background: 230 35% 4%;
     --foreground: 210 40% 98%;
 
@@ -50,6 +51,62 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    --background: 210 40% 98%;
+    --foreground: 230 35% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 35% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 35% 8%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 199 100% 60%;
+
+    --secondary: 260 80% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 20% 94%;
+    --muted-foreground: 220 12% 40%;
+
+    --accent: 270 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 210 100% 50%;
+
+    --gradient-aura: radial-gradient(circle at 50% 50%, hsl(210 100% 60% / 0.18), hsl(270 80% 70% / 0.1), transparent 70%);
+    --gradient-glow: linear-gradient(135deg, hsl(210 100% 50%), hsl(260 80% 60%));
+    --shadow-glow: 0 0 60px hsl(210 100% 60% / 0.25);
+    --shadow-neon: 0 0 30px hsl(210 100% 60% / 0.3), 0 0 60px hsl(260 80% 70% / 0.2);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 230 25% 20%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 96%;
+    --sidebar-accent-foreground: 230 25% 20%;
+    --sidebar-border: 220 15% 90%;
+    --sidebar-ring: 210 100% 50%;
+  }
+}
+
+@layer base {
+  html {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  body, .glass, .border, [class*="bg-"], [class*="text-"], [class*="border-"] {
+    transition-property: background-color, color, border-color, box-shadow;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
   }
 }
 
