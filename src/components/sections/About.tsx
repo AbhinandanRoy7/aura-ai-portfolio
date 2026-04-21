@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Briefcase, Award } from "lucide-react";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 
 const skills = [
   "Python", "PyTorch", "TensorFlow", "LLMs", "RAG", "FastAPI",
@@ -61,14 +62,18 @@ export const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <Card className="glass p-6 h-full group hover:border-primary/50 transition-all hover:-translate-y-1 duration-300">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <card.icon className="w-5 h-5 text-primary" />
-                </div>
-                <h3 className="font-semibold text-lg mb-1">{card.title}</h3>
-                <p className="font-mono text-xs text-muted-foreground mb-3">{card.date}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{card.desc}</p>
-              </Card>
+              <CardContainer containerClassName="!py-0 w-full" className="w-full">
+                <CardBody className="w-full">
+                  <Card className="glass p-6 h-full group hover:border-primary/50 transition-all hover:-translate-y-1 duration-300 transform-gpu">
+                    <CardItem translateZ={30} className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                      <card.icon className="w-5 h-5 text-primary" />
+                    </CardItem>
+                    <CardItem as="h3" translateZ={40} className="font-semibold text-lg mb-1">{card.title}</CardItem>
+                    <CardItem as="p" translateZ={30} className="font-mono text-xs text-muted-foreground mb-3">{card.date}</CardItem>
+                    <CardItem as="p" translateZ={20} className="text-sm text-muted-foreground leading-relaxed">{card.desc}</CardItem>
+                  </Card>
+                </CardBody>
+              </CardContainer>
             </motion.div>
           ))}
         </div>
