@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
 import { SplineScene } from "@/components/ui/splite";
-import { Spotlight } from "@/components/ui/spotlight";
 import { Brain, Code2, Cpu, Sparkles } from "lucide-react";
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen w-full overflow-hidden flex items-center pt-24">
-      <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="hsl(199 100% 70%)" />
-
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center px-6 relative z-10">
         {/* LEFT */}
         <div className="space-y-8">
