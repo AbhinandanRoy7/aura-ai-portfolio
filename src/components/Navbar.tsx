@@ -10,6 +10,7 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Navbar = () => {
   const navItems = [
@@ -31,6 +32,7 @@ export const Navbar = () => {
       <a href="mailto:abhinandancr7@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
         <Mail className="w-4 h-4" />
       </a>
+      <ThemeToggle />
     </div>
   );
 
