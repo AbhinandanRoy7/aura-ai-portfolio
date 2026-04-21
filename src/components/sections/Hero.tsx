@@ -58,8 +58,13 @@ export const Hero = () => {
             <a href="#projects" className="px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:scale-105 transition-transform glow-border">
               View Work →
             </a>
-            <a href="#contact" className="px-6 py-3 rounded-full glass font-medium hover:border-primary/50 transition-colors">
-              Get In Touch
+            <a
+              href="https://drive.google.com/file/d/1ahxUVfwFCKmw_K271EQQtRbeHdC3VLwP/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="px-6 py-3 rounded-full glass font-medium hover:border-primary/50 transition-colors"
+            >
+              Resume
             </a>
           </motion.div>
 
